@@ -1,4 +1,4 @@
-package levenshtein 
+package levenshtein
 
 const r rune = 0
 
@@ -18,18 +18,18 @@ func Distance(s1 string, s2 string) int {
 				continue
 			}
 
-			s := dp[i-1][j-1]		
+			s := dp[i-1][j-1]
 
 			if rs1[i] != rs1[i-1] {
-		  	s = min(s, dp[i-1][j])
-		  }
+				s = min(s, dp[i-1][j])
+			}
 
-		  if rs2[j] != rs2[j-1] {
-		  	s = min(s, dp[i][j-1])
-		  }
+			if rs2[j] != rs2[j-1] {
+				s = min(s, dp[i][j-1])
+			}
 
 			if rs1[i] == rs2[j] {
-				dp[i][j] = s 
+				dp[i][j] = s
 			} else {
 				dp[i][j] = s + 1
 			}

@@ -1,7 +1,7 @@
-package levenshtein 
+package levenshtein
 
 import (
-    "testing"
+	"testing"
 )
 
 func TestDistance(t *testing.T) {
